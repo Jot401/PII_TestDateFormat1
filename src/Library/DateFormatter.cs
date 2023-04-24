@@ -8,17 +8,21 @@
         }
 
         public static string ChangeFormat(DateTime date, string format)
-        {
-            switch (format)
-            {
-                case "US":
-                    return date.ToString("MM/dd/yyyy");
-                case "UK":
-                    return date.ToString("dd/MM/yyyy");
-                default:
-                    return "";
-            }
-        }
+{
+    if (format == "US")
+    {
+        return date.ToString("MM/dd/yyyy");
+    }
+    else if (format == "UK")
+    {
+        return date.ToString("dd/MM/yyyy");
+    }
+    else
+    {
+        return "";
+    }
+}
+
     }
 }
 
